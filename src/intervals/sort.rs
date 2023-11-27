@@ -2,6 +2,8 @@
 // - testing.
 // - proper docs.
 
+use alloc::vec::Vec;
+
 use core::cmp::Ordering;
 
 use super::Interval;

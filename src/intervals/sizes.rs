@@ -1,3 +1,5 @@
+use alloc::vec::Vec;
+
 use super::Interval;
 
 // Not sure how useful this is. Maybe just use if for IntervalVec

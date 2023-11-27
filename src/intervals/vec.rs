@@ -1,3 +1,4 @@
+use alloc::vec::Vec;
 use core::ops::Index;
 
 use super::Interval;
@@ -13,7 +14,7 @@ where
     T: Copy + Ord,
 {
     pub fn new() -> Self {
-        Self { v: vec![] }
+        Self { v: Vec::new() }
     }
 }
 

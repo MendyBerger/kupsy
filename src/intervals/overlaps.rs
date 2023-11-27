@@ -1,3 +1,5 @@
+use alloc::vec::Vec;
+
 use super::Interval;
 
 // Consider: should there be a count_overlaps? How would counts work?

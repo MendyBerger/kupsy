@@ -1,3 +1,5 @@
+use alloc::vec::Vec;
+
 use super::Interval;
 
 // pub fn intersection_2_interval_iters<T>(a: &Vec<Interval<T>>, b: &Vec<Interval<T>>) -> Vec<Interval<T>>
