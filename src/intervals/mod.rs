@@ -62,5 +62,5 @@ where
 pub enum NeighborStrategy {
     #[default]
     Same,
-    Separate,
+    Distinct,
 }
