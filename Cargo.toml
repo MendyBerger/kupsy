@@ -11,4 +11,5 @@ description = "Some data-structures and algorithms that might be useful"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
+[dev-dependencies]
+inline-python = "0.12.0"

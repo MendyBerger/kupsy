@@ -5,6 +5,8 @@ mod merge_overlapping;
 mod overlaps;
 mod sizes;
 mod sort;
+#[cfg(test)]
+mod testing;
 mod vec;
 
 pub use insert::*;
