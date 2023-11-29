@@ -3,7 +3,7 @@ use alloc::vec::Vec;
 use super::Interval;
 
 // Not sure how useful this is. Maybe just use if for IntervalVec
-pub fn get_length_of_intervals<T>(_input: Vec<Interval<T>>) -> Vec<T>
+pub fn get_length_of_intervals<T>(_input: &Vec<Interval<T>>) -> Vec<T>
 where
     T: Copy + Ord,
 {
