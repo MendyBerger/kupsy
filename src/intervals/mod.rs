@@ -1,3 +1,5 @@
+use core::ops::Sub;
+
 mod insert;
 mod intersection;
 mod merge_iters;
@@ -29,11 +31,10 @@ where
 
 impl<T> Interval<T>
 where
-    T: Copy + Ord,
+    T: Copy + Ord + Sub<Output = T>,
 {
-    // not sure what to return when T is a timestamp
-    pub fn duration(&self) -> T {
-        todo!()
+    pub fn length(&self) -> T {
+        self.end - self.start
     }
 }
 

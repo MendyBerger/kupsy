@@ -1,8 +1,8 @@
 use alloc::vec::Vec;
-use core::ops::Index;
+use core::ops::{Index, Sub};
 
 use super::{
-    get_gaps_intervals, get_length_of_intervals, insert_interval_and_merge_pre_sorted,
+    get_gaps_intervals, get_length_of_each_interval, insert_interval_and_merge_pre_sorted,
     intersection_interval_iters, merge_interval_iters, sort_and_merge_overlapping, Interval,
 };
 
@@ -48,10 +48,6 @@ where
         get_gaps_intervals(&self.v).into()
     }
 
-    pub fn interval_lengths(&self) -> Vec<T> {
-        get_length_of_intervals(&self.v)
-    }
-
     pub fn clear(&mut self) {
         self.v.clear()
     }
@@ -77,6 +73,15 @@ where
 
     pub fn truncate(&mut self, len: usize) {
         self.v.truncate(len)
+    }
+}
+
+impl<T> IntervalVec<T>
+where
+    T: Copy + Ord + Sub<Output = T>,
+{
+    pub fn interval_lengths(&self) -> Vec<T> {
+        get_length_of_each_interval(&self.v)
     }
 }
 
