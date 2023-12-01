@@ -14,6 +14,13 @@ where
     todo!()
 }
 
+pub fn clip_overlaps<T>(_intervals: &mut Vec<Interval<T>>)
+where
+    T: Copy + Ord,
+{
+    todo!()
+}
+
 pub fn has_overlaps<T>(_intervals: &Vec<Interval<T>>) -> bool
 where
     T: Copy + Ord,
