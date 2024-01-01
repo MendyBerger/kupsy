@@ -2,8 +2,6 @@
 // - testing.
 // - proper docs.
 
-use alloc::vec::Vec;
-
 use core::cmp::Ordering;
 
 use super::Interval;
@@ -16,7 +14,7 @@ use super::Interval;
 /// example...
 ///
 // TODO: take an iterator, not a vec.
-pub fn sort_by_start<T>(v: &mut Vec<Interval<T>>)
+pub fn sort_by_start<T>(v: &mut [Interval<T>])
 where
     T: Copy + Ord,
 {
@@ -29,7 +27,7 @@ where
         result
     })
 }
-pub fn sort_by_end<T>(v: &mut Vec<Interval<T>>)
+pub fn sort_by_end<T>(v: &mut [Interval<T>])
 where
     T: Copy + Ord,
 {
